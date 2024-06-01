@@ -1,3 +1,4 @@
+# I. Kubernetes Deployment strategies
 ## 1. [Recreate]()
 - A recreate deployment strategy is an all-or-nothing process that lets you update an application immediately, with some downtime. 
 
@@ -32,8 +33,8 @@ This strategy keeps only one version live at any given time. It involves routing
 
 - Like in a blue/green deployment, there are two disadvantages: the application needs to be able to run multiple versions at the same time, and you need to have a smart traffic mechanism that can route a subset of requests to the new version.
 
-## Which Strategy to Choose?
-The following table summarizes deployment strategies and their pros and cons, to help you choose the best strategy for your use case.
+# II. Which Strategy to Choose?
+* The following table summarizes deployment strategies and their pros and cons, to help you choose the best strategy for your use case.
 
 |Deployment Strategy|Available in K8s out of the box?|Pros|
 |---|---|---|
