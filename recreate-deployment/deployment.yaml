@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-strategies
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: deployment-strategies
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: deployment-strategies
+    spec:
+      containers:
+      - name: deployment-strategies
+        image: ngochung1809/blue-green:latest
+        env:
+        - name: html_name
+          value: "app-v1.html"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: deployment-strategies-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: devopsteam.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-deployment-strategies
+            port:
+              number: 5000
