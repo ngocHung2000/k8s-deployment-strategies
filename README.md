@@ -19,7 +19,7 @@
 ## 3. [Blue-Green Deployment]()
 - A blue/green (or red/black) deployment strategy enables you to deploy a new version while avoiding downtime. Blue represents the current version of the application, while green represents the new version. 
 
-This strategy keeps only one version live at any given time. It involves routing traffic to a blue deployment while creating and testing a green deployment. After the testing phase is concluded, you start routing traffic to the new version. Then, you can keep the blue deployment for a future rollback or decommission it. 
+- This strategy keeps only one version live at any given time. It involves routing traffic to a blue deployment while creating and testing a green deployment. After the testing phase is concluded, you start routing traffic to the new version. Then, you can keep the blue deployment for a future rollback or decommission it. 
 
 - A blue/green deployment eliminates downtime and reduces risk because you can immediately roll back to the previous version if something occurs while deploying the new version. It also helps avoid versioning issues because you change the entire application state in one deployment. 
 
